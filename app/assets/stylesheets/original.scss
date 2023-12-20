@@ -1,7 +1,5 @@
 body {
   background-image: url("/nature.jpg");
-  // width: 100vw;
-  // height: 100vh;
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
@@ -15,10 +13,8 @@ body {
 
 .bg-glass {
   background: rgba(5, 5, 5, 0.2);
-  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
-  // border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .o-width {
@@ -132,7 +128,6 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  // background-color: rgba(124, 208, 247);
 }
 
 .circle-Basketball {
@@ -142,7 +137,6 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  // background-color: rgba(239, 132, 132);
 }
 
 .circle-Soccer {
@@ -152,7 +146,6 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  // background-color: rgba(234, 226, 87);
 }
 
 .circle-Americanfootball {
@@ -162,7 +155,6 @@ body {
   position: absolute;
   top: 10px;
   right: 4px;
-  // background-color: rgba(188, 239, 70);
 }
 
 .circle-Others {
@@ -172,7 +164,6 @@ body {
   position: absolute;
   top: 10px;
   right: 10px;
-  // background-color: rgba(184, 9, 237);
 }
 
 .Baseball {
@@ -224,24 +215,3 @@ body {
   bottom: 10px;
   right: 20px;
 }
-
-// .Baseball {
-//   background-color: aqua;
-// }
-
-// .Basketball {
-//   background-color: rgb(239, 132, 132);
-// }
-
-// .Americanfootball {
-//   background-color: rgb(188, 239, 70);
-// }
-
-// .Soccer {
-//   background-color: rgb(234, 226, 87);
-// }
-
-// .BeachVolleyball {
-//   background-color: rgb(184, 9, 237);
-//   color: antiquewhite;
-// }
