@@ -1,0 +1,60 @@
+    <div class="col">
+      <%= link_to post_path(post), class:"text-decoration-none text-light" do %>
+      <div class="o-card mx-auto mb-4 position-relative text-light" style="width: 14rem;height: 19rem;">
+        <div class="<%= post.genre %> mb-4"><%= post.genre %></div>
+        <%= image_tag "/#{post.genre}.png", class:"circle-#{post.genre}" %>
+        <h5 class="fw-bold"><span class="h6">日時：</span><%= l post.start_time, format: :short %></h5>
+        <h5 class="fw-bold text-truncate"><span class="h6">場所：</span><%= post.location %></h5>
+        <div class="mt-3"><%= image_tag post.user.avatar.url, size: "32x32", class: "rounded-circle me-2" %><%= post.user.name %></div>
+        <p class="text-limit mt-3"><%= post.body %></p>
+        <div class="d-flex justify-content-around o-card-footer">
+          <div class="icon-area">
+            <% if logged_in? %>
+              <% if post.user_id == current_user.id %>
+                <%= link_to edit_post_path(post), class:"text-decoration-none" do %>
+                  <i class="bi bi-pencil text-light" style="font-size: 1.5rem;"></i>
+                <% end %>
+                <%= link_to post_path(post), class:"text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "削除しますか"} do %>
+                  <i class="bi bi-trash3 text-light" style="font-size: 1.5rem;"></i>
+                <% end %>
+                  <% if current_user.like?(post) %>
+                    <%= link_to like_path(post), class:"text-decoration-none", id: "unlike-button-for-post-#{post.id}", data: { turbo_method: :delete } do %>
+                    <i class="bi bi-emoji-wink text-danger" style="font-size: 1.5rem;"></i>
+                    <% end %>
+                    <%= post.likes.count %>
+                  <% else %>
+                    <%= link_to likes_path(post_id: post.id), class:"text-decoration-none", id: "like-button-for-post-#{post.id}", data: { turbo_method: :post } do %>
+                    <i class="bi bi-emoji-wink text-light" style="font-size: 1.5rem;"></i>
+                    <% end %>
+                    <%= post.likes.count %>
+                  <% end %>
+              <% else %>
+                  <% if current_user.like?(post) %>
+                    <%= link_to like_path(post), class:"text-decoration-none", id: "unlike-button-for-post-#{post.id}", data: { turbo_method: :delete } do %>
+                    <i class="bi bi-emoji-wink text-danger" style="font-size: 1.5rem;"></i>
+                    <% end %>
+                  <%= post.likes.count %>
+                  <% else %>
+                    <%= link_to likes_path(post_id: post.id), class:"text-decoration-none", id: "like-button-for-post-#{post.id}", data: { turbo_method: :post } do %>
+                    <i class="bi bi-emoji-wink text-light" style="font-size: 1.5rem;"></i>
+                    <% end %>
+                    <%= post.likes.count %>
+                  <% end %>
+              <% end %>
+            <% else %>
+              <%= link_to likes_path(post_id: post.id), class:"text-decoration-none", id: "like-button-for-post-#{post.id}", data: { turbo_method: :post } do %>
+                <i class="bi bi-emoji-wink text-light" style="font-size: 1.5rem;"></i>
+              <% end %>
+              <%= post.likes.count %>
+            <% end %>
+          </div>
+          <div class="comment">
+            <%= link_to post_path(post), class:"text-decoration-none" do %>
+              <i class="bi bi-chat-left text-light" style="font-size: 1.5rem;"></i>
+            <% end %>
+            <%= post.comments.count %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>

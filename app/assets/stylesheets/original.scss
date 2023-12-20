@@ -1,0 +1,247 @@
+body {
+  background-image: url("/nature.jpg");
+  // width: 100vw;
+  // height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.o-collapse {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.bg-glass {
+  background: rgba(5, 5, 5, 0.2);
+  // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  // border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.o-width {
+  width: 100vw;
+}
+
+.big-margin-top {
+  margin-top: 80px;
+}
+.main {
+  background: black;
+  height: 100px;
+}
+
+.spark {
+  color: whitesmoke;
+  position: relative;
+}
+
+.spark:hover {
+  color: rgb(241, 133, 133);
+}
+
+.o-spark {
+  color: black;
+}
+
+.o-spark:hover {
+  color: rgb(241, 133, 133);
+}
+
+.slash li+li {
+  position: relative;
+}
+
+.slash li+li::before {
+  content: "";
+  position: absolute;
+  border-left: 1px solid rgba(246, 244, 244, 0.5);
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  transform: rotate(15deg);
+}
+
+.o-list-group {
+  margin-top: 200px;
+  margin-left: 24px;
+}
+
+.o-list-item {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.o-list-item:hover {
+  background: rgba(5, 5, 5, 0.2);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+}
+
+.o-button {
+  border: none;
+  background-color: rgba(255, 0, 0, 0);
+}
+
+.o-card {
+  border-radius: 30px;
+  padding: 20px 15px;
+  background: rgba(5, 5, 5, 0.2);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.o-card:hover {
+  background: rgba( 255, 255, 255, 0.2 );
+}
+
+.o-card-show {
+  border-radius: 30px;
+  padding: 40px 30px;
+  background: rgba(5, 5, 5, 0.2);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.text-limit {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.circle-Baseball {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  // background-color: rgba(124, 208, 247);
+}
+
+.circle-Basketball {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  // background-color: rgba(239, 132, 132);
+}
+
+.circle-Soccer {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  // background-color: rgba(234, 226, 87);
+}
+
+.circle-Americanfootball {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  right: 4px;
+  // background-color: rgba(188, 239, 70);
+}
+
+.circle-Others {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  // background-color: rgba(184, 9, 237);
+}
+
+.Baseball {
+  border-left: 6px solid rgba(124, 208, 247);
+  border-bottom: 1px solid rgba(180, 178, 178, 0.492);
+  padding-left: 10px;
+}
+
+.Basketball {
+  border-left: 6px solid rgba(239, 132, 132);
+  border-bottom: 1px solid rgba(180, 178, 178, 0.492);
+  padding-left: 10px;
+}
+
+.Americanfootball {
+  border-left: 6px solid rgba(188, 239, 70);
+  border-bottom: 1px solid rgba(180, 178, 178, 0.492);
+  padding-left: 10px;
+}
+
+.Soccer {
+  border-left: 6px solid rgba(234, 226, 87);
+  border-bottom: 1px solid rgba(180, 178, 178, 0.492);
+  padding-left: 10px;
+}
+
+.Others {
+  border-left: 6px solid rgba(184, 9, 237);
+  border-bottom: 1px solid rgba(180, 178, 178, 0.492);
+  padding-left: 10px;
+}
+
+.o-card-footer {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.icon-area {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+}
+
+.comment {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+}
+
+// .Baseball {
+//   background-color: aqua;
+// }
+
+// .Basketball {
+//   background-color: rgb(239, 132, 132);
+// }
+
+// .Americanfootball {
+//   background-color: rgb(188, 239, 70);
+// }
+
+// .Soccer {
+//   background-color: rgb(234, 226, 87);
+// }
+
+// .BeachVolleyball {
+//   background-color: rgb(184, 9, 237);
+//   color: antiquewhite;
+// }

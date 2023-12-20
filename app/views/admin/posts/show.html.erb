@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1>詳細</h1>
+      <div class="text-right mb-3">
+        <%= link_to "編集", edit_admin_post_path(@post), class: 'btn btn-success' %>
+        <%= link_to "削除", admin_post_path(@post), data: { turbo_method: :delete, turbo_confirm: "削除しますか" }, class: 'btn btn-danger' %>
+      </div>
+      <table class="table table-bordered bg-white">
+        <tr>
+          <th scope="row">id</th>
+          <td><%= @post.id %></td>
+        </tr>
+        <tr>
+          <th scope="row">user</th>
+          <td><%= @post.user.name %></td>
+        </tr>
+        <tr>
+          <th scope="row">genre</th>
+          <td><%= @post.genre %></td>
+        </tr>
+        <tr>
+          <th scope="row">start_time</th>
+          <td><%= l @post.start_time, format: :short %></td>
+        </tr>
+        <tr>
+          <th scope="row">location</th>
+          <td><%= @post.location %></td>
+        </tr>
+        <tr>
+          <th scope="row">body</th>
+          <td><%= @post.body %></td>
+        </tr>
+        <tr>
+          <th scope="row">created_at</th>
+          <td><%= l @post.created_at, format: :short %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

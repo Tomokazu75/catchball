@@ -1,0 +1,9 @@
+<div class="col-md-6 mx-auto vh-100 d-flex align-items-center">
+  <div class="w-auto mx-auto bg-glass text-light text-center rounded p-1">
+    <h3 class="mb-2 text-light">プロフィール</h3>
+    <h1 class="mt-4"><%= current_user.name %></h1>
+    <h2 class="mt-4"><%= current_user.email %></h2>
+    <div class="mt-4"><%= image_tag current_user.avatar.url, size: "100x100", class:"rounded-circle" %></div>
+    <%= link_to "編集", edit_profiles_path, class:"btn btn-primary mt-4" %>
+  </div>
+</div>

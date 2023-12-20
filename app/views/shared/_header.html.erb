@@ -1,0 +1,68 @@
+<header class="position-fixed o-width z-3">
+  <ul class="nav bg-dark opacity-75 align-items-center d-flex justify-content-between">
+    <li class="nav-item">
+      <%= link_to root_path, class:"nav-link" do %>
+        <%= image_tag "Catchball-logo", size: "125x28" %>
+      <% end %>
+    </li>
+    <li class="d-flex align-items-center">
+      <% if logged_in? %>
+        <div class="nav-item d-none d-xl-block d-xxl-block">
+          <%= link_to "ログアウト", logout_path, class:"nav-link text-light", data: { turbo_method: :delete, turbo_confirm: 'ログアウトしますか' } %>
+        </div>
+      <% else %>
+        <div class="nav-item d-none d-xl-block d-xxl-block">
+          <%= link_to "ログイン", login_path, class:"nav-link text-light" %>
+        </div>
+      <% end %>
+      <div class="nav-item d-none d-xl-block d-xxl-block">
+        <%= link_to "新規登録", new_user_path, class:"nav-link text-light" %>
+      </div>
+      <div class="dropdown d-block d-xl-none d-xxl-none">
+        <button class="btn text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="bi bi-list" style="font-size: 1.2rem;"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+          <li><%= link_to "ログイン", login_path, class:"dropdown-item o-spark" %></li>
+          <li><%= link_to "新規登録", new_user_path, class:"dropdown-item o-spark" %></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><%= link_to "プロフィール", profiles_path, class:"dropdown-item o-spark" %></li>
+          <li><%= link_to "全ての投稿", posts_path, class:"dropdown-item o-spark" %></li>
+          <li><%= link_to "カテゴリ別", "#", class:"dropdown-item" %></li>
+          <li><small class="ms-3"><%= link_to "- Today", today_posts_path, class:"text-decoration-none o-spark" %></small></li>
+          <li><small class="ms-3"><%= link_to "- Baseball", baseball_posts_path, class:"text-decoration-none o-spark" %></small></li>
+          <li><small class="ms-3"><%= link_to "- Soccer", soccer_posts_path, class:"text-decoration-none o-spark" %></small></li>
+          <li><small class="ms-3"><%= link_to "- Basketball", basketball_posts_path, class:"text-decoration-none o-spark" %></small></li>
+          <li><small class="ms-3"><%= link_to "- Americanfootball", americanfootball_posts_path, class:"text-decoration-none o-spark" %></small></li>
+          <li><small class="ms-3"><%= link_to "- Others", others_posts_path, class:"text-decoration-none o-spark" %></small></li>
+          <li><%= link_to "新規投稿", new_post_path, class:"dropdown-item o-spark" %></li>
+          <li><%= link_to "行くかも", likes_posts_path, class:"dropdown-item o-spark" %></li>
+          <li><hr class="dropdown-divider"></li>
+          <%= link_to "ログアウト", logout_path, class:"dropdown-item o-spark", data: { turbo_method: :delete, turbo_confirm: 'ログアウトしますか' } %>
+        </ul>
+      </div>
+    </li>
+  </ul>
+  
+  <%# <div>
+    <ul class="nav bg-secondary nav-fill opacity-75 slash">
+      <li class="nav-item">
+        <%# = link_to "Today", today_posts_path, class:"nav-link spark" %>
+      <%# <li class="nav-item"> %>
+        <%#= link_to "Baseball", baseball_posts_path, class:"nav-link spark" %>
+      <%# </li> %>
+      <%# <li class="nav-item"> %>
+        <%#= link_to "Soccer", soccer_posts_path, class:"nav-link spark" %>
+      <%# </li> %>
+      <%# <li class="nav-item"> %>
+        <%#= link_to "Basketball", basketball_posts_path, class:"nav-link spark" %>
+      <%# </li> %>
+      <%# <li class="nav-item"> %>
+        <%#= link_to "Americanfootball", americanfootball_posts_path, class:"nav-link spark" %>
+      <%# </li> %>
+      <%# <li class="nav-item"> %>
+        <%#= link_to "Others", others_posts_path, class:"nav-link spark" %>
+      <%# </li> %>
+    <%# </ul> %>
+  <%# </div> %> 
+</header>

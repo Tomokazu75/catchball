@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1>詳細</h1>
+      <div class="text-right mb-3">
+        <%= link_to "編集", edit_admin_user_path(@user), class: 'btn btn-success' %>
+        <%= link_to "削除", admin_user_path(@user), data: { turbo_method: :delete, turbo_confirm: "削除しますか" }, class: 'btn btn-danger' %>
+      </div>
+      <table class="table table-bordered bg-white">
+        <tr>
+          <th scope="row">id</th>
+          <td><%= @user.id %></td>
+        </tr>
+        <tr>
+          <th scope="row">role</th>
+          <td><%= @user.role %></td>
+        </tr>
+        <tr>
+          <th scope="row">name</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th scope="row">avatar</th>
+          <td><%= image_tag @user.avatar.url, size:"100x100" %></td>
+        </tr>
+        <tr>
+          <th scope="row">created_at</th>
+          <td><%= l @user.created_at, format: :short %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

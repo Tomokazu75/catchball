@@ -1,0 +1,9 @@
+<div class="mb-2 border-top">
+  <br>
+  <div>
+  <%= image_tag comment.user.avatar.url, size: "30x30" %>
+  <%= comment.user.name %>
+  <%= l comment.created_at, format: :default %>
+  </div>
+  <p><%= comment.text %></p>
+</div>

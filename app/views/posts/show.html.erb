@@ -1,0 +1,32 @@
+    <div class="col-md-6 mx-auto big-margin-top">
+      <div class="o-card-show mx-auto mb-4 position-relative text-light" style="width: auto;height: auto;">
+        <div class="<%= @post.genre %> mb-4"><%= @post.genre %></div>
+        <%= image_tag "/#{@post.genre}.png", class:"circle-#{@post.genre}" %>
+        <h5 class="fw-bold"><span class="h6">日時：</span><%= l @post.start_time, format: :short %></h5>
+        <h5 class="fw-bold text-truncate"><span class="h6">場所：</span><%= @post.location %></h5>
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <%= image_tag @post.user.avatar.url, size: "40x40", class: "rounded-circle me-2" %><%= @post.user.name %>
+          </div>
+          <div>
+              <% if @post.user_id == current_user.id %>
+                <%= link_to edit_post_path(@post), class:"text-decoration-none" do %>
+                  <i class="bi bi-pencil text-light" style="font-size: 1.5rem;"></i>
+                <% end %>
+                <%= link_to post_path(@post), class:"text-decoration-none", data: {turbo_method: :delete, turbo_confirm: "削除しますか"} do %>
+                  <i class="bi bi-trash3 text-light" style="font-size: 1.5rem;"></i>
+                <% end %>
+              <% end %>
+          </div>
+        </div>
+        <p class="mt-3"><%= @post.body %></p>
+        <div class="d-flex">
+          <p class="me-2">行くかも：<%= @post.likes.count %></p>
+          <% @post.likes.each do |people| %>
+            <div><%= image_tag people.user.avatar.url, size: "20x20", class: "rounded-circle" %></div>
+          <% end %>
+        </div>
+        <%= render "comments/form", comment: @comment, post: @post %>
+        <%= render @comments %>
+      </div>
+    </div>

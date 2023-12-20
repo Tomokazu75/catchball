@@ -1,0 +1,15 @@
+
+<div class="container text-light vh-100 d-flex align-items-center">
+  <div class="row vw-100">
+    <div class="col text-center mx-auto">
+      <h1>管理画面ログイン</h1>
+      <%= form_with url: admin_login_path do |f| %>
+          <div><%= f.label :email %></div>
+          <div><%= f.email_field :email %></div>
+          <div><%= f.label :password %></div>
+          <div><%= f.password_field :password %></div>
+        <%= f.submit "ログイン" %>
+      <% end %>
+    </div>
+  </div>
+</div>

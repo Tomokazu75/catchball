@@ -1,0 +1,25 @@
+<tr>
+  <td>
+    <%= post.id %>
+  </td>
+  <td>
+    <%= post.user.name %>
+  </td>
+  <td>
+    <%= post.genre %>
+  </td>
+  <td>
+    <%= l post.start_time, format: :short %>
+  </td>
+  <td>
+    <%= post.location %>
+  </td>
+  <td>
+    <%= l post.created_at, format: :short %>
+  </td>
+  <td>
+    <%= link_to "詳細", admin_post_path(post), class: 'btn btn-info' %>
+    <%= link_to "編集", edit_admin_post_path(post), class: 'btn btn-success' %>
+    <%= link_to "削除", admin_post_path(post), data: { turbo_method: :delete, turbo_confirm: "削除しますか" }, class: 'btn btn-danger' %>
+  </td>
+</tr>

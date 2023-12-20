@@ -1,0 +1,35 @@
+<div class="col-md-2 d-none d-xl-block d-xxl-block">
+  <div class="o-list-group position-fixed">
+    <%= link_to profiles_path, class:"o-list-item d-flex gap-2" do %>
+      <i class="bi bi-person" style="font-size: 2rem;"></i>
+      <div>プロフィール</div>
+    <% end %>
+    <%= link_to posts_path, class:"o-list-item d-flex gap-2" do %>
+      <i class="bi bi-card-list" style="font-size: 2rem;"></i>
+      <div>全ての投稿</div>
+    <% end %>
+    <div class="dropdown o-list-item d-flex">
+      <i class="bi bi-diamond-half" style="font-size: 2rem;"></i>
+      <button type="button" class="text-light o-button" data-bs-toggle="dropdown" aria-expanded="false">
+        カテゴリ別
+      </button>
+      <ul class="dropdown-menu bg-secondary text-center">
+        <li><%= link_to "今日の募集", today_posts_path, class:"nav-link spark" %></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><%= link_to "Baseball", baseball_posts_path, class:"nav-link spark" %></li>
+        <li><%= link_to "Soccer", soccer_posts_path, class:"nav-link spark" %></li>
+        <li><%= link_to "Basketball", basketball_posts_path, class:"nav-link spark" %></li>
+        <li><%= link_to "Americanfootball", americanfootball_posts_path, class:"nav-link spark" %></li>
+        <li><%= link_to "Others", others_posts_path, class:"nav-link spark" %></li>
+      </ul>
+    </div>
+    <%= link_to new_post_path, class:"o-list-item d-flex gap-2" do %>
+      <i class="bi bi-plus-square-dotted" style="font-size: 2rem;"></i>
+      <div>新規投稿</div>
+    <% end %>
+    <%= link_to likes_posts_path, class:"o-list-item d-flex gap-2" do %>
+      <i class="bi bi-emoji-wink" style="font-size: 2rem;"></i>
+      <div>行くかも</div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="col-lg-6 mx-auto vh-100 d-flex align-items-center">
+  <div class="w-75 mx-auto text-light">
+    <h3 class="text-center mb-2">新規投稿</h3>
+    <%= form_with model: @post do |f| %>
+      <div>
+        <%= f.label :genre, class:"form-label" %>
+        <%= f.select :genre, ["Baseball", "Soccer", "Basketball", "Americanfootball", "Others"] %>
+      </div>
+      <div>
+        <%= f.label :start_time, class:"form-label" %>
+        <%= f.datetime_field :start_time, class:"form-control" %>
+      </div>
+      <div>
+        <%= f.label :location, class:"form-label" %>
+        <%= f.text_field :location, class:"form-control" %>
+      </div>
+      <div>
+        <%= f.label :body, class:"form-label" %>
+        <%= f.text_area :body, class:"form-control" %>
+      </div>
+      <div>
+        <%= f.submit "作成", class:"btn btn-primary mt-2" %>
+      </div>
+    <% end %>
+  </div>
+</div>

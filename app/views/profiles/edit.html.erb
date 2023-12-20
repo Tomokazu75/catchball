@@ -1,0 +1,24 @@
+<div class="col-md-6 mx-auto vh-100 d-flex align-items-center">
+  <div class="w-auto mx-auto text-light">
+    <h2 class="mb-2 text-center">プロフィール編集</h2>
+    <%= form_with model: @user, url: profiles_path, method: :put do |f| %>
+        <div>
+          <%= f.label :name, class:"form-label" %>
+          <%= f.text_field :name, class:"form-control" %>
+        </div>
+        <div>
+          <%= f.label :email, class:"form-label" %>
+          <%= f.email_field :email, class:"form-control" %>
+        </div>
+        <div>
+          <%= f.label :avatar, class:"form-label" %>
+          <div><%= image_tag current_user.avatar.url, size: "80x80", class:"rounded-circle mb-2" %></div>
+          <%= f.file_field :avatar, class:"form-control" %>
+          <%= f.hidden_field :avatar_cache %>
+        </div>
+        <div>
+          <%= f.submit "登録", class:"btn btn-primary mt-2" %>
+        </div>
+      <% end %>
+  </div>
+</div>
