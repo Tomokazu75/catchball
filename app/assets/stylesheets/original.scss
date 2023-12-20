@@ -1,8 +1,9 @@
-body {
+.container-fluid {
   background-image: url("/nature.jpg");
   background-attachment: fixed;
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
 }
 
 .o-collapse {

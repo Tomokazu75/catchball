@@ -1,7 +1,8 @@
-<div class="col-lg-6 mx-auto vh-100 d-flex align-items-center">
+<div class="col-lg-6 mx-auto min-vh-100 d-flex align-items-center">
   <div class="w-75 mx-auto text-light">
     <h3 class="mb-4 text-center">投稿編集</h3>
     <%= form_with model: @post do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
       <div>
         <%= f.label :genre, class:"form-label" %>
         <%= f.select :genre, ["Baseball", "Basketball", "Americanfootball", "Soccer", "Others"], class:"form-control" %>

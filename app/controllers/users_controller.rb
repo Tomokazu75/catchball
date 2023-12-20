@@ -8,10 +8,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to posts_path, success: "ユーザーを作成しました"
+      redirect_to login_path, success: "ユーザーを作成しました"
     else
-      flash.now[:danger] = "ユーザーを作成できませんでした"
-      render :new
+      # flash.now[:danger] = "ユーザーを作成できませんでした"
+      render :new, status: :unprocessable_entity
     end
   end
 
