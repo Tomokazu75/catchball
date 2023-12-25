@@ -1,5 +1,5 @@
 ## アプリ名
-![Alt text](Catchball-logo%E5%85%83.png)
+![Alt text](Catchball-logo%E5%85%83-1.png)
 
 ## アプリ概要
 **公園で一緒にスポーツをする相手を探せるアプリ。**
