@@ -32,4 +32,4 @@ FacebookやX(Twitter)で募集してもなんだか浮いてしまうし、マ�
 - Rails 7.0.8
 
 ## サイトURL
-URLは[こちら](https://catchball-59a88a0775c5.herokuapp.com/posts)
+URLは[こちら](https://catchball-59a88a0775c5.herokuapp.com)
